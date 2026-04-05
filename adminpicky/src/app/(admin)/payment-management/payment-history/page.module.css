@@ -1,0 +1,111 @@
+.container {
+    padding: 2.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    margin-bottom: 2.5rem;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.subtitle {
+    color: var(--text-muted);
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.searchBox {
+    flex: 1;
+    min-width: 300px;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    background: white;
+    font-size: 0.95rem;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+}
+
+.select {
+    padding: 0.85rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    background: white;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.tableCard {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.tableWrapper { width: 100%; overflow-x: auto; }
+
+.table { width: 100%; border-collapse: separate; border-spacing: 0; }
+
+.table th { padding: 1rem; background: #F9FAFB; text-align: left; color: var(--text-muted); font-size: 0.85rem; font-weight: 600; }
+
+.table td { padding: 1.25rem 1rem; border-bottom: 1px solid var(--border-color); vertical-align: middle; }
+
+.payId { font-weight: 800; font-family: monospace; color: var(--primary-color); }
+.ordId { font-weight: 800; font-family: monospace; color: #64748B; }
+.customer { font-weight: 700; color: #1E293B; }
+.amount { font-weight: 900; color: #1E293B; font-size: 1.1rem; }
+
+.methodTag {
+    padding: 0.25rem 0.6rem;
+    background: #F3F4F6;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.statusBadge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.success { background: #DCFCE7; color: #166534; }
+.pending { background: #FEF3C7; color: #92400E; }
+.failed { background: #FEE2E2; color: #991B1B; }
+
+.date { font-size: 0.9rem; color: #64748B; font-weight: 600; }
+
+.pagination {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-align: right;
+    padding: 0 1rem;
+}

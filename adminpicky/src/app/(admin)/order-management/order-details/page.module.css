@@ -1,0 +1,161 @@
+.container {
+    padding: 2.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.badge {
+    padding: 0.5rem 1rem;
+    background: #FFFBEB;
+    color: #92400E;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    border: 1px solid #FDE68A;
+}
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: #1E293B;
+}
+
+.productItem {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.productList .productItem:last-child {
+    border-bottom: none;
+}
+
+.prodImg {
+    width: 64px;
+    height: 64px;
+    border-radius: 0.75rem;
+    object-fit: cover;
+}
+
+.prodDetails {
+    flex: 1;
+}
+
+.prodName {
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.prodMeta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.25rem;
+}
+
+.prodTotal {
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.summaryFooter {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px dashed var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sumLine {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #64748B;
+}
+
+.sumTotal {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--text-main);
+    margin-top: 0.5rem;
+}
+
+.infoColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.infoItem label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.infoItem span {
+    font-weight: 800;
+    color: #334155;
+    font-size: 1rem;
+}
+
+.payBadge {
+    padding: 0.25rem 0.75rem;
+    background: #FAFAFA;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    width: fit-content;
+}
+
+.uid {
+    font-family: monospace;
+    color: #64748B;
+}

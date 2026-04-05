@@ -1,0 +1,138 @@
+.container {
+    padding: 2.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header { margin-bottom: 2.5rem; }
+.title { font-size: 2.2rem; font-weight: 800; color: #1E293B; }
+.subtitle { color: var(--text-muted); }
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.formCard, .tableCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.cardTitle { font-size: 1.25rem; font-weight: 800; margin-bottom: 2rem; color: #1E293B; border-bottom: 1px solid #F1F5F9; padding-bottom: 1rem; }
+
+.form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+.formGroup { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.formGroup label { font-size: 0.8rem; font-weight: 800; color: var(--primary-color); text-transform: uppercase; }
+
+.formGroup input {
+    padding: 1rem 1.25rem;
+    border-radius: 1rem;
+    border: 1.5px solid var(--border-color);
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    background: #F8FAFC;
+    color: #1E293B;
+}
+
+.formGroup input:focus { outline: none; border-color: var(--primary-color); background: white; }
+
+.btnGroup { display: flex; gap: 1rem; margin-top: 1rem; }
+
+.submitBtn {
+    flex: 1;
+    padding: 1.1rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(159, 18, 57, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.submitBtn:hover { transform: translateY(-2px); }
+
+.cancelBtn {
+    padding: 1.1rem;
+    background: white;
+    color: #475569;
+    border: 1px solid #CBD5E1;
+    border-radius: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* Table */
+.tableWrapper { width: 100%; overflow-x: auto; }
+.table { width: 100%; border-collapse: separate; border-spacing: 0; }
+.table th { padding: 1rem; background: #F8FAFC; text-align: left; color: #64748B; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; }
+.table td { padding: 1.25rem 1rem; border-bottom: 1px solid #F1F5F9; vertical-align: middle; }
+
+.custCell { display: flex; flex-direction: column; gap: 0.25rem; }
+.custName { font-weight: 800; font-size: 1.05rem; color: #1E293B; }
+.custPhone { font-size: 0.85rem; color: #64748B; font-weight: 600; font-family: monospace; }
+
+.addressCell { display: flex; flex-direction: column; gap: 0.25rem; color: #475569; font-weight: 500; }
+.cityName { font-weight: 800; color: #1E293B; font-size: 0.9rem; }
+
+.pinTag { font-family: monospace; font-weight: 800; background: #F1F5F9; padding: 0.35rem 0.6rem; border-radius: 0.5rem; color: #0F172A; }
+
+.actions { display: flex; gap: 0.5rem; justify-content: flex-end; }
+
+.actionBtn {
+    padding: 0.5rem 1rem;
+    background: #F8FAFC;
+    color: #334155;
+    border: 1px solid #E2E8F0;
+    border-radius: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.actionBtn:hover { background: #E2E8F0; }
+
+.dangerBtn { background: white; border-color: #FECACA; color: #EF4444; }
+.dangerBtn:hover { background: #FEF2F2; }
+
+/* Toast */
+.toast {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    background: #10B981;
+    color: white;
+    padding: 1.25rem 2rem;
+    border-radius: 1.25rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3);
+    animation: slideIn 0.3s ease-out;
+    z-index: 1000;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@media (max-width: 1200px) {
+    .mainGrid { grid-template-columns: 1fr; }
+}

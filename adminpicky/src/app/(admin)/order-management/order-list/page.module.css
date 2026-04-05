@@ -1,0 +1,140 @@
+.container {
+    padding: 2.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.subtitle {
+    color: var(--text-muted);
+}
+
+.exportBtn {
+    background: #4F46E5;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.75rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.searchBox {
+    flex: 1;
+    min-width: 300px;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    background: white;
+    font-size: 0.95rem;
+}
+
+.filterSelect {
+    padding: 0.85rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    background: white;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.tableCard {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table th {
+    padding: 1rem;
+    background: #F9FAFB;
+    text-align: left;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.table td {
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.orderId { font-weight: 800; font-family: monospace; color: var(--primary-color); }
+.customer { font-weight: 700; color: #1E293B; }
+.date { font-size: 0.9rem; color: #64748B; font-weight: 600; }
+.amount { font-weight: 900; color: #1E293B; font-size: 1.1rem; }
+
+.statusBadge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.pending { background: #FEF3C7; color: #92400E; }
+.shipped { background: #E0E7FF; color: #3730A3; }
+.delivered { background: #DCFCE7; color: #166534; }
+.cancelled { background: #FEE2E2; color: #991B1B; }
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.viewBtn, .statusBtn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+}
+
+.viewBtn { background: #F3F4F6; color: #4B5563; }
+.statusBtn { background: #EEF2FF; color: #4F46E5; }

@@ -74,3 +74,21 @@
   width: 1.6rem;
   height: 1.6rem;
 }
+
+.logoutBtn {
+  background: transparent;
+  color: #E11D48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0.25rem;
+  border: none;
+}
+
+.logoutBtn:hover {
+  background: #FFF1F2;
+  transform: scale(1.1);
+}

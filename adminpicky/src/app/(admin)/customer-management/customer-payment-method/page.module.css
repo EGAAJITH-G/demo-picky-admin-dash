@@ -1,0 +1,153 @@
+.container {
+    padding: 2.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    margin-bottom: 2.5rem;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.subtitle {
+    color: var(--text-muted);
+}
+
+.paymentGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.paymentCard {
+    padding: 2.5rem;
+    border-radius: 2rem;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.paymentCard::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+
+.visa { background: linear-gradient(135deg, #1E40AF, #1E3A8A); }
+.mastercard { background: linear-gradient(135deg, #F97316, #C2410C); }
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brandIcon {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.defaultLabel {
+    background: rgba(255,255,255,0.2);
+    padding: 0.25rem 0.6rem;
+    border-radius: 1rem;
+    font-size: 0.65rem;
+    font-weight: 800;
+}
+
+.cardNumber {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: monospace;
+    letter-spacing: 0.25em;
+    margin: 2rem 0;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardHolder label, .cardExpiry label {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.cardHolder span, .cardExpiry span {
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+.actions { display: flex; justify-content: flex-end; }
+
+.deleteBtn {
+    background: none;
+    border: none;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.7);
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Add New Card */
+.addNewCard {
+    border: 2px dashed var(--border-color);
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+    text-align: center;
+    cursor: pointer;
+    background: white;
+    transition: all 0.2s ease;
+}
+
+.addNewCard:hover { border-color: var(--primary-color); background: rgba(159, 18, 57, 0.01); }
+
+.plusIcon { font-size: 2rem; color: var(--primary-color); font-weight: 800; margin-bottom: 1rem; }
+.addTitle { font-size: 1.25rem; font-weight: 900; margin: 0; }
+.addDesc { font-size: 0.85rem; color: var(--text-muted); }
+
+/* History Card */
+.historyCard {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+}
+
+.hTitle { font-size: 1.25rem; font-weight: 800; margin-bottom: 2rem; }
+
+.tableWrapper { width: 100%; }
+.table { width: 100%; border-collapse: separate; border-spacing: 0; }
+.table th { padding: 1rem; background: #F9FAFB; text-align: left; }
+.table td { padding: 1.25rem 1rem; border-bottom: 1px solid var(--border-color); }
+
+.success { color: #10B981; font-weight: 800; font-size: 0.85rem; }

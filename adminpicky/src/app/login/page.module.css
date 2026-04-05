@@ -1,0 +1,135 @@
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    background: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', 'Poppins', sans-serif;
+}
+
+/* Left Pane Aesthetics */
+.leftPane {
+    flex: 1.2;
+    background-image: url('/login-bg.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 4rem;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.2));
+}
+
+.heroContent {
+    position: relative;
+    color: white;
+    z-index: 10;
+    max-width: 600px;
+    animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.heroBadge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.heroContent h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+}
+
+.heroContent p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #CBD5E1;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Right Pane Authentication Form */
+.rightPane {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: #FFFFFF;
+}
+
+.loginCard {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUpFade {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.logoHeader { margin-bottom: 2.5rem; text-align: center; }
+
+.brandPng { width: 56px; height: 56px; border-radius: 12px; margin-bottom: 1.5rem; object-fit: cover; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+
+.logoHeader h1 { font-size: 1.8rem; font-weight: 800; color: #0F172A; margin: 0 0 0.5rem 0; letter-spacing: -0.02em; }
+.logoHeader p { font-size: 0.95rem; color: #64748B; margin: 0; font-weight: 500; }
+
+.form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.inputGroup { display: flex; flex-direction: column; gap: 0.5rem; }
+.labelRow { display: flex; justify-content: space-between; align-items: center; }
+.inputGroup label { font-size: 0.9rem; font-weight: 700; color: #1E293B; }
+.forgotLink { font-size: 0.8rem; font-weight: 700; color: var(--primary-color, #9F1239); text-decoration: none; }
+
+.inputGroup input { height: 3.2rem; padding: 0 1rem; border-radius: 0.75rem; border: 1.5px solid #E2E8F0; font-size: 1rem; font-family: inherit; color: #0F172A; background: #FFF; transition: all 0.2s; }
+.inputGroup input:focus { outline: none; border-color: #0F172A; box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.05); }
+
+.loginBtn { height: 3.2rem; margin-top: 0.5rem; background: #0F172A; color: white; font-size: 1rem; font-weight: 700; border: none; border-radius: 0.75rem; cursor: pointer; transition: all 0.2s; }
+.loginBtn:hover:not(:disabled) { background: #1E293B; transform: translateY(-1px); box-shadow: 0 6px 15px rgba(15, 23, 42, 0.15); }
+.loginBtn:disabled { background: #94A3B8; cursor: not-allowed; }
+
+.divider { display: flex; align-items: center; text-align: center; margin: 0.5rem 0; }
+.divider::before, .divider::after { content: ''; flex: 1; border-bottom: 1px solid #E2E8F0; }
+.divider span { padding: 0 1rem; color: #94A3B8; font-size: 0.8rem; font-weight: 700; }
+
+.securityKeyBtn { 
+    height: 3.2rem; background: white; color: #334155; border: 1px solid #CBD5E1; 
+    border-radius: 0.75rem; font-weight: 700; font-size: 0.9rem; display: flex; 
+    align-items: center; justify-content: center; gap: 0.5rem; cursor: pointer; transition: all 0.2s; 
+}
+.securityKeyBtn:hover { background: #F8FAFC; color: #0F172A; border-color: #94A3B8; }
+
+.footerInfo { margin-top: 2rem; text-align: center; font-size: 0.8rem; color: #94A3B8; font-weight: 500; }
+
+@media (max-width: 900px) {
+    .container { flex-direction: column; }
+    .leftPane { flex: none; height: 30vh; padding: 2rem; }
+    .heroContent h2 { font-size: 2rem; }
+    .heroContent p { font-size: 1rem; display: none; }
+    .rightPane { padding: 3rem 2rem; }
+}

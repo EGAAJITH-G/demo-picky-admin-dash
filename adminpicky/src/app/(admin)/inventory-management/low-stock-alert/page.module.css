@@ -1,0 +1,128 @@
+.container {
+    padding: 2.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header { margin-bottom: 2.5rem; }
+.title { font-size: 2.2rem; font-weight: 800; color: #1E293B; }
+.subtitle { color: var(--text-muted); }
+
+.alertBanner {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #FFF1F2;
+    border: 2px solid #FECDD3;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.bannerIcon {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.bannerText h3 { margin: 0 0 0.5rem 0; font-size: 1.4rem; font-weight: 900; color: #9F1239; }
+.bannerText p { margin: 0; color: #BE123C; font-weight: 600; line-height: 1.5; font-size: 1.05rem; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.alertCard {
+    background: white;
+    border-radius: 1.5rem;
+    border: 2px solid;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.alertCard:hover { transform: translateY(-5px); }
+
+.lowCard { border-color: #FDE047; }
+.outCard { border-color: #FECACA; background: #FEF2F2; }
+
+.cardHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+
+.idTag { font-family: monospace; font-weight: 800; color: #64748B; background: #F1F5F9; padding: 0.25rem 0.5rem; border-radius: 0.5rem; }
+
+.badge { padding: 0.35rem 0.75rem; border-radius: 2rem; font-size: 0.75rem; font-weight: 900; text-transform: uppercase; }
+.badgeLow { background: #FEF3C7; color: #B45309; }
+.badgeOut { background: #FEE2E2; color: #991B1B; }
+
+.cardBody { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 2rem; }
+
+.itemName { font-size: 1.4rem; font-weight: 900; color: #1E293B; margin-bottom: 0.25rem; }
+.itemCat { color: #64748B; font-weight: 600; font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+.stockLevel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 6px solid;
+}
+
+.lowCard .stockLevel { border-color: #F59E0B; background: #FEF3C7; }
+.outCard .stockLevel { border-color: #EF4444; background: white; }
+
+.stockNum { font-size: 3rem; font-weight: 900; line-height: 1; margin-bottom: 0.25rem; }
+.lowCard .stockNum { color: #B45309; }
+.outCard .stockNum { color: #991B1B; }
+
+.stockLabel { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; }
+.lowCard .stockLabel { color: #B45309; }
+.outCard .stockLabel { color: #991B1B; }
+
+.cardFooter { display: flex; justify-content: center; }
+
+.notifyBtn {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-weight: 800;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.lowCard .notifyBtn { background: #F59E0B; color: white; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3); }
+.lowCard .notifyBtn:hover { background: #D97706; }
+
+.outCard .notifyBtn { background: #EF4444; color: white; box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3); }
+.outCard .notifyBtn:hover { background: #DC2626; }
+
+.notifyBtn.btnNotified {
+    background: #10B981;
+    color: white;
+    cursor: default;
+    box-shadow: none;
+}
+
+.safeState {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: #DCFCE7;
+    border-radius: 1.5rem;
+    border: 2px dashed #86EFAC;
+    color: #166534;
+}
+
+.safeIcon { font-size: 4rem; margin-bottom: 1rem; }
+.safeState h2 { font-size: 2rem; font-weight: 900; margin-bottom: 0.5rem; }
+.safeState p { font-size: 1.1rem; font-weight: 600; }

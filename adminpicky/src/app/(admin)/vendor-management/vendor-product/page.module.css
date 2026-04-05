@@ -1,0 +1,194 @@
+.container {
+    padding: 2.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.titleArea {
+    flex: 1;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.subtitle {
+    color: var(--text-muted);
+}
+
+.addBtn {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.85rem 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 8px 20px rgba(159, 18, 57, 0.3);
+    transition: all 0.3s ease;
+}
+
+.addBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(159, 18, 57, 0.4);
+}
+
+.card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.tableContainer {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table th {
+    padding: 1rem;
+    background: #F9FAFB;
+    text-align: left;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.productCell {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.productImg {
+    width: 64px;
+    height: 64px;
+    border-radius: 0.75rem;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-main);
+}
+
+.sku {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+.price {
+    font-weight: 800;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.stockInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.stockNum {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.stockLabel {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.statusBadge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.statusActive {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.statusLow {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.statusOut {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+.actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+}
+
+.editBtn, .deleteBtn {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.editBtn {
+    background: #F3F4F6;
+    color: #4B5563;
+}
+
+.editBtn:hover {
+    background: #E5E7EB;
+    color: var(--text-main);
+}
+
+.deleteBtn {
+    background: rgba(239, 68, 68, 0.1);
+    color: #EF4444;
+}
+
+.deleteBtn:hover {
+    background: #EF4444;
+    color: white;
+    transform: scale(1.1);
+}

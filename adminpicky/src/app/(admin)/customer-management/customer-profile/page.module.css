@@ -1,0 +1,204 @@
+.container {
+    padding: 2.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.infoColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profileCard {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+}
+
+.profileHeader {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+}
+
+.custName {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.custJoined {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.detailsGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.detailItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.detailItem label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.detailItem span {
+    font-weight: 700;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.statCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.statLabel {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.statVal {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.tabsColumn {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    min-height: 500px;
+}
+
+.tabHeader {
+    display: flex;
+    gap: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+}
+
+.tabBtn {
+    padding: 1rem 0.5rem;
+    background: none;
+    border: none;
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.tabActive {
+    color: var(--primary-color);
+}
+
+.tabActive::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 3px 3px 0 0;
+}
+
+.tableWrapper { width: 100%; }
+
+.table { width: 100%; border-collapse: separate; border-spacing: 0; }
+
+.table th { padding: 1rem; background: #F9FAFB; text-align: left; }
+
+.table td { padding: 1.25rem 1rem; border-bottom: 1px solid var(--border-color); }
+
+.ordId { font-weight: 800; font-family: monospace; }
+.prodName { font-weight: 700; }
+.amt { font-weight: 900; color: var(--primary-color); }
+
+.statusBadge { padding: 0.25rem 0.6rem; border-radius: 1rem; font-size: 0.7rem; font-weight: 900; }
+
+.delivered { background: #DCFCE7; color: #166534; }
+.pending { background: #FEF3C7; color: #92400E; }
+
+/* Payment Styles */
+.payGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+
+.payCard {
+    padding: 2rem;
+    border-radius: 1.25rem;
+    border: 1px solid var(--border-color);
+    background: #FAFAFA;
+}
+
+.payBrand { font-weight: 900; font-size: 1.25rem; color: #1E293B; margin-bottom: 1rem; }
+.payNum { font-size: 1.1rem; font-family: monospace; font-weight: 700; color: #475569; margin-bottom: 1.5rem; }
+.payMeta { display: flex; justify-content: space-between; align-items: center; }
+
+.payMeta span { font-weight: 700; font-size: 0.8rem; color: #64748B; }
+
+.deletePay { background: none; border: none; font-size: 0.8rem; color: #EF4444; font-weight: 800; cursor: pointer; text-decoration: underline; }
+
+.addPayBtn {
+    grid-column: span 2;
+    padding: 2rem;
+    border: 2px dashed var(--border-color);
+    border-radius: 1.5rem;
+    background: none;
+    color: var(--text-muted);
+    font-weight: 800;
+    cursor: pointer;
+}

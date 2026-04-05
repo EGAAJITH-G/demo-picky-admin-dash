@@ -1,0 +1,140 @@
+.container {
+    padding: 2.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header { margin-bottom: 2.5rem; }
+.title { font-size: 2.2rem; font-weight: 800; }
+.subtitle { color: var(--text-muted); }
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.formCard, .logCard {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.cardTitle { font-size: 1.25rem; font-weight: 800; margin-bottom: 2rem; color: #1E293B; border-bottom: 1px solid #F1F5F9; padding-bottom: 1rem; }
+
+.form { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.formGroup { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.formGroup label { font-size: 0.85rem; font-weight: 800; color: var(--primary-color); text-transform: uppercase; }
+
+.selectInput, .numInput {
+    padding: 1.25rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    font-size: 1.05rem;
+    font-weight: 700;
+    width: 100%;
+    background: #F8FAFC;
+    color: #1E293B;
+}
+
+.submitBtn {
+    margin-top: 1rem;
+    padding: 1.25rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(159, 18, 57, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.submitBtn:hover { transform: translateY(-2px); }
+
+/* Log Styles */
+.logList { display: flex; flex-direction: column; gap: 1rem; max-height: 400px; overflow-y: auto; padding-right: 0.5rem; }
+
+.logItem {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    animation: slideIn 0.3s ease-out;
+}
+
+.logIcon {
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.logContent { flex: 1; }
+
+.logTop { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem; }
+.logProd { font-weight: 800; color: #1E293B; font-size: 1.05rem; }
+.logQty { font-weight: 900; color: #10B981; background: #DCFCE7; padding: 0.25rem 0.75rem; border-radius: 2rem; font-size: 0.85rem; }
+
+.logTime { color: #94A3B8; font-size: 0.85rem; font-weight: 600; }
+
+.emptyLog {
+    text-align: center;
+    padding: 3rem;
+    color: #94A3B8;
+    font-weight: 600;
+    background: #F8FAFC;
+    border-radius: 1rem;
+    border: 1px dashed #CBD5E1;
+}
+
+/* Toast */
+.toast {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    color: white;
+    padding: 1.25rem 2rem;
+    border-radius: 1.25rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+}
+
+.success { background: #10B981; }
+.error { background: #EF4444; }
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes bounceIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@media (max-width: 1024px) {
+    .mainGrid { grid-template-columns: 1fr; }
+}

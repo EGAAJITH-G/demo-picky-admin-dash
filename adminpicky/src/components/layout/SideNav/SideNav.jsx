@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 
 const SideNav = ({ isMinimized, setIsMinimized }) => {
   const pathname = usePathname();
-  
+
   // Track open state for categories
   const [vendorOpen, setVendorOpen] = useState(false);
   const [customerOpen, setCustomerOpen] = useState(false);
@@ -47,6 +47,7 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
 
   const vendorSubItems = [
     { name: 'Vendor Add', icon: 'M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z' },
+    { name: 'Vendor List', icon: 'M4 6h16M4 10h16M4 14h16M4 18h16' },
     { name: 'Approve/Reject Vendor', icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' },
     { name: 'Vendor Profile', icon: 'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z' },
     { name: 'Vendor Product', icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4' },
@@ -140,11 +141,16 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
       <div className={styles.logoSection}>
         {!isMinimized && (
           <div className={styles.logoWrapper}>
-            <h1 className={styles.logo}>Picky</h1>
-            <p className={styles.tagline}>ADMIN PANEL</p>
+            <div className={styles.brandGroup}>
+              <img src="/logo.png" alt="Picky Logo" className={styles.logoImage} />
+              <div className={styles.brandText}>
+                <h1 className={styles.logo}>Picky</h1>
+                <p className={styles.tagline}>ADMIN PANEL</p>
+              </div>
+            </div>
           </div>
         )}
-        <button 
+        <button
           className={styles.toggleBtn}
           onClick={() => setIsMinimized(!isMinimized)}
           title={isMinimized ? "Expand Sidebar" : "Collapse Sidebar"}
@@ -158,9 +164,9 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
       <div className={styles.scrollContainer}>
         <nav className={styles.nav}>
           {menuItems.map((item) => (
-            <Link 
-              key={item.name} 
-              href={item.href} 
+            <Link
+              key={item.name}
+              href={item.href}
               className={`${styles.navItem} ${isActive(item.href) ? styles.active : ''}`}
             >
               <svg className={styles.icon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -172,7 +178,7 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
 
           {/* Vendor Management */}
           <div className={styles.dropdownContainer}>
-            <button 
+            <button
               className={`${styles.navItem} ${isCategoryActive('/vendor-management') ? styles.categoryActive : ''}`}
               onClick={() => setVendorOpen(!vendorOpen)}
             >
@@ -186,15 +192,15 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
                 </svg>
               )}
             </button>
-            
+
             {!isMinimized && (
               <div className={`${styles.submenu} ${vendorOpen ? styles.show : ''}`}>
                 {vendorSubItems.map((subItem) => {
                   const subHref = `/vendor-management/${subItem.name.toLowerCase().replace(/\s+/g, '-').replace(/[\(\)\/]/g, '')}`;
                   return (
-                    <Link 
-                      key={subHref} 
-                      href={subHref} 
+                    <Link
+                      key={subHref}
+                      href={subHref}
                       className={`${styles.subItem} ${isActive(subHref) ? styles.subActive : ''}`}
                     >
                       <svg className={styles.subIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -210,7 +216,7 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
 
           {/* Product Management */}
           <div className={styles.dropdownContainer}>
-            <button 
+            <button
               className={`${styles.navItem} ${isCategoryActive('/product-management') ? styles.categoryActive : ''}`}
               onClick={() => setProductOpen(!productOpen)}
             >
@@ -224,15 +230,15 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
                 </svg>
               )}
             </button>
-            
+
             {!isMinimized && (
               <div className={`${styles.submenu} ${productOpen ? styles.show : ''}`}>
                 {productSubItems.map((subItem) => {
                   const subHref = `/product-management/${subItem.name.toLowerCase().replace(/\s+/g, '-').replace(/[\(\)\/]/g, '')}`;
                   return (
-                    <Link 
-                      key={subHref} 
-                      href={subHref} 
+                    <Link
+                      key={subHref}
+                      href={subHref}
                       className={`${styles.subItem} ${isActive(subHref) ? styles.subActive : ''}`}
                     >
                       <svg className={styles.subIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -248,7 +254,7 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
 
           {/* Category Management */}
           <div className={styles.dropdownContainer}>
-            <button 
+            <button
               className={`${styles.navItem} ${isCategoryActive('/category-management') ? styles.categoryActive : ''}`}
               onClick={() => setCategoryOpen(!categoryOpen)}
             >
@@ -262,15 +268,15 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
                 </svg>
               )}
             </button>
-            
+
             {!isMinimized && (
               <div className={`${styles.submenu} ${categoryOpen ? styles.show : ''}`}>
                 {categorySubItems.map((subItem) => {
                   const subHref = `/category-management/${subItem.name.toLowerCase().replace(/\s+/g, '-').replace(/[\(\)\/]/g, '')}`;
                   return (
-                    <Link 
-                      key={subHref} 
-                      href={subHref} 
+                    <Link
+                      key={subHref}
+                      href={subHref}
                       className={`${styles.subItem} ${isActive(subHref) ? styles.subActive : ''}`}
                     >
                       <svg className={styles.subIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -286,7 +292,7 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
 
           {/* Customer Management */}
           <div className={styles.dropdownContainer}>
-            <button 
+            <button
               className={`${styles.navItem} ${isCategoryActive('/customer-management') ? styles.categoryActive : ''}`}
               onClick={() => setCustomerOpen(!customerOpen)}
             >
@@ -300,15 +306,15 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
                 </svg>
               )}
             </button>
-            
+
             {!isMinimized && (
               <div className={`${styles.submenu} ${customerOpen ? styles.show : ''}`}>
                 {customerSubItems.map((subItem) => {
                   const subHref = `/customer-management/${subItem.name.toLowerCase().replace(/\s+/g, '-').replace(/[\(\)\/]/g, '')}`;
                   return (
-                    <Link 
-                      key={subHref} 
-                      href={subHref} 
+                    <Link
+                      key={subHref}
+                      href={subHref}
                       className={`${styles.subItem} ${isActive(subHref) ? styles.subActive : ''}`}
                     >
                       <svg className={styles.subIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -324,7 +330,7 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
 
           {/* Order Management */}
           <div className={styles.dropdownContainer}>
-            <button 
+            <button
               className={`${styles.navItem} ${isCategoryActive('/order-management') ? styles.categoryActive : ''}`}
               onClick={() => setOrderOpen(!orderOpen)}
             >
@@ -338,15 +344,15 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
                 </svg>
               )}
             </button>
-            
+
             {!isMinimized && (
               <div className={`${styles.submenu} ${orderOpen ? styles.show : ''}`}>
                 {orderSubItems.map((subItem) => {
                   const subHref = `/order-management/${subItem.name.toLowerCase().replace(/\s+/g, '-').replace(/[\(\)\/]/g, '')}`;
                   return (
-                    <Link 
-                      key={subHref} 
-                      href={subHref} 
+                    <Link
+                      key={subHref}
+                      href={subHref}
                       className={`${styles.subItem} ${isActive(subHref) ? styles.subActive : ''}`}
                     >
                       <svg className={styles.subIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -362,7 +368,7 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
 
           {/* Payment Management */}
           <div className={styles.dropdownContainer}>
-            <button 
+            <button
               className={`${styles.navItem} ${isCategoryActive('/payment-management') ? styles.categoryActive : ''}`}
               onClick={() => setPaymentOpen(!paymentOpen)}
             >
@@ -376,15 +382,15 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
                 </svg>
               )}
             </button>
-            
+
             {!isMinimized && (
               <div className={`${styles.submenu} ${paymentOpen ? styles.show : ''}`}>
                 {paymentSubItems.map((subItem) => {
                   const subHref = `/payment-management/${subItem.name.toLowerCase().replace(/\s+/g, '-').replace(/[\(\)\/]/g, '')}`;
                   return (
-                    <Link 
-                      key={subHref} 
-                      href={subHref} 
+                    <Link
+                      key={subHref}
+                      href={subHref}
                       className={`${styles.subItem} ${isActive(subHref) ? styles.subActive : ''}`}
                     >
                       <svg className={styles.subIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -400,7 +406,7 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
 
           {/* Reviews */}
           <div className={styles.dropdownContainer}>
-            <button 
+            <button
               className={`${styles.navItem} ${isCategoryActive('/reviews') ? styles.categoryActive : ''}`}
               onClick={() => setReviewsOpen(!reviewsOpen)}
             >
@@ -414,15 +420,15 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
                 </svg>
               )}
             </button>
-            
+
             {!isMinimized && (
               <div className={`${styles.submenu} ${reviewsOpen ? styles.show : ''}`}>
                 {reviewsSubItems.map((subItem) => {
                   const subHref = `/reviews/${subItem.name.toLowerCase().replace(/\s+/g, '-').replace(/[\(\)\/]/g, '')}`;
                   return (
-                    <Link 
-                      key={subHref} 
-                      href={subHref} 
+                    <Link
+                      key={subHref}
+                      href={subHref}
                       className={`${styles.subItem} ${isActive(subHref) ? styles.subActive : ''}`}
                     >
                       <svg className={styles.subIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -438,7 +444,7 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
 
           {/* Coupon & Discount Management */}
           <div className={styles.dropdownContainer}>
-            <button 
+            <button
               className={`${styles.navItem} ${isCategoryActive('/coupon-management') ? styles.categoryActive : ''}`}
               onClick={() => setCouponOpen(!couponOpen)}
             >
@@ -471,7 +477,7 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
 
           {/* Inventory & Stock Management */}
           <div className={styles.dropdownContainer}>
-            <button 
+            <button
               className={`${styles.navItem} ${isCategoryActive('/inventory-management') ? styles.categoryActive : ''}`}
               onClick={() => setInventoryOpen(!inventoryOpen)}
             >
@@ -504,7 +510,7 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
 
           {/* Shipping Management */}
           <div className={styles.dropdownContainer}>
-            <button 
+            <button
               className={`${styles.navItem} ${isCategoryActive('/shipping-management') ? styles.categoryActive : ''}`}
               onClick={() => setShippingOpen(!shippingOpen)}
             >
@@ -537,7 +543,7 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
 
           {/* Report & Analytics */}
           <div className={styles.dropdownContainer}>
-            <button 
+            <button
               className={`${styles.navItem} ${isCategoryActive('/reports') ? styles.categoryActive : ''}`}
               onClick={() => setReportOpen(!reportOpen)}
             >

@@ -1,0 +1,159 @@
+.container {
+    padding: 2.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.subtitle {
+    color: var(--text-muted);
+}
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.addCard, .listCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputGroup label {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.inputGroup input {
+    padding: 0.85rem;
+    border-radius: 0.75rem;
+    border: 1.5px solid var(--border-color);
+    outline: none;
+}
+
+.inputGroup input:focus {
+    border-color: var(--primary-color);
+}
+
+.submitBtn {
+    padding: 0.85rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.cancelBtn {
+    padding: 0.85rem;
+    background: #F3F4F6;
+    color: var(--text-muted);
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+}
+
+.tableWrapper {
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table th {
+    padding: 1rem;
+    background: #F9FAFB;
+    text-align: left;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.catName {
+    font-weight: 700;
+    color: var(--text-main);
+    display: block;
+}
+
+.catSlug {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: monospace;
+}
+
+.countBadge {
+    padding: 0.25rem 0.6rem;
+    background: #F1F5F9;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    color: #475569;
+    font-weight: 600;
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.editBtn, .deleteBtn {
+    padding: 0.5rem;
+    background: #F3F4F6;
+    color: #4B5563;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.editBtn:hover {
+    background: #E5E7EB;
+}
+
+.deleteBtn:hover {
+    background: #FEE2E2;
+    color: #EF4444;
+}

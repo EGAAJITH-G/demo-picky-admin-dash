@@ -1,0 +1,162 @@
+.container {
+    padding: 2.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header { margin-bottom: 2.5rem; }
+.title { font-size: 2.2rem; font-weight: 800; }
+.subtitle { color: var(--text-muted); }
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.aggregateCard, .breakdownCard, .insightsCard {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.scoreCircle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.scoreInt {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #1E293B;
+    margin: 0;
+    line-height: 1;
+}
+
+.stars {
+    display: flex;
+    gap: 0.25rem;
+    margin: 1rem 0;
+}
+
+.stars svg { width: 32px; height: 32px; }
+.starOn { color: #F59E0B; }
+.starOff { color: #E2E8F0; }
+
+.verifiedCount {
+    color: #64748B;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.highlights { display: flex; justify-content: space-around; }
+
+.highlightItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    text-align: center;
+}
+
+.highlightItem strong { font-size: 1.25rem; color: #10B981; font-weight: 900; }
+.highlightItem span { font-size: 0.8rem; color: #94A3B8; font-weight: 700; text-transform: uppercase; }
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #1E293B;
+    margin-bottom: 2rem;
+}
+
+.barList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.barRow {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.starLabel {
+    width: 40px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #475569;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.starGlyph { color: #F59E0B; font-size: 1.2rem; }
+
+.progressTrack {
+    flex: 1;
+    height: 12px;
+    background: #F1F5F9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s ease-out;
+}
+
+.fill5 { background: #10B981; }
+.fill4 { background: #84CC16; }
+.fill3 { background: #F59E0B; }
+.fill2 { background: #F97316; }
+.fill1 { background: #EF4444; }
+
+.countLabel {
+    width: 40px;
+    text-align: right;
+    font-weight: 800;
+    color: #64748B;
+}
+
+/* Insights */
+.bulletList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.bulletItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #F8FAFC;
+    border-radius: 1rem;
+}
+
+.bulletIcon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.bulletItem h4 { margin: 0 0 0.5rem 0; font-weight: 800; font-size: 1.05rem; color: #1E293B; }
+.bulletItem p { margin: 0; color: #475569; font-size: 0.95rem; line-height: 1.5; }

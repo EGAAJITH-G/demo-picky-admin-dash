@@ -1,0 +1,165 @@
+.container {
+    padding: 2.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    margin-bottom: 2.5rem;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.subtitle {
+    color: var(--text-muted);
+}
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.formCard, .listCard {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputGroup label {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+.inputGroup input {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1.5px solid var(--border-color);
+    outline: none;
+    font-size: 1rem;
+}
+
+.inputGroup input:focus {
+    border-color: var(--primary-color);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.generateBtn {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 1rem;
+    font-weight: 800;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(159, 18, 57, 0.3);
+}
+
+.tableContainer {
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table th {
+    padding: 1rem;
+    background: #F9FAFB;
+    text-align: left;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.table td {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.skuBox {
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    background: #FFF1F2;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    display: block;
+    width: fit-content;
+}
+
+.created {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.productName {
+    font-weight: 700;
+    display: block;
+}
+
+.variantInfo {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.copyBtn {
+    padding: 0.5rem 1rem;
+    background: #F3F4F6;
+    border-radius: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #4B5563;
+    border: none;
+    cursor: pointer;
+}
+
+.copyBtn:hover {
+    background: #E5E7EB;
+}

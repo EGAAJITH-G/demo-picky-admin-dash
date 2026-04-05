@@ -1,0 +1,123 @@
+.container {
+    padding: 2.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.subtitle {
+    color: var(--text-muted);
+}
+
+.card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.tableWrapper {
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table th {
+    padding: 1rem;
+    background: #F9FAFB;
+    text-align: left;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.table td {
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.name {
+    font-weight: 700;
+    display: block;
+}
+
+.date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.vendor {
+    font-weight: 600;
+    color: #4B5563;
+}
+
+.tag {
+    padding: 0.25rem 0.5rem;
+    background: #F3F4F6;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    color: #4B5563;
+    font-weight: 600;
+}
+
+.statusBadge {
+    padding: 0.2rem 0.6rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.pending { background: #FEF3C7; color: #92400E; }
+.approved { background: #D1FAE5; color: #065F46; }
+.rejected { background: #FEE2E2; color: #991B1B; }
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.approveBtn, .rejectBtn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+
+.approveBtn {
+    background: #10B981;
+    color: white;
+}
+
+.rejectBtn {
+    background: #EF4444;
+    color: white;
+}
+
+.resetBtn {
+    text-decoration: underline;
+    background: none;
+    border: none;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    cursor: pointer;
+}

@@ -1,0 +1,118 @@
+.container {
+    padding: 2.5rem;
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.subtitle {
+    color: var(--text-muted);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+}
+
+.formCard, .historyCard {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+.input, .select {
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: 1.5px solid var(--border-color);
+}
+
+.variantRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.previewBox {
+    margin-top: 1.5rem;
+    padding: 2rem;
+    background: #F9FAFB;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.previewSKU {
+    font-family: monospace;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-top: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.submitBtn {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1.15rem;
+    background: var(--primary-color);
+    color: white;
+    font-weight: 800;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.listItem {
+    padding: 1rem;
+    background: #F8FAFC;
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skuTag {
+    font-weight: 800;
+    background: #E2E8F0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}

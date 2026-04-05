@@ -1,0 +1,87 @@
+.container {
+    padding: 2.5rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header { margin-bottom: 2rem; }
+.title { font-size: 2.2rem; font-weight: 800; }
+.subtitle { color: var(--text-muted); }
+
+.queueStats { margin-bottom: 2.5rem; }
+
+.statBox {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: #FFF1F2;
+    border: 1px solid #FECDD3;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+}
+
+.statVal { font-size: 1.5rem; font-weight: 900; color: var(--primary-color); }
+.statLabel { font-weight: 700; color: #881337; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.05em; }
+
+.tableCard {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.tableWrapper { width: 100%; overflow-x: auto; }
+.table { width: 100%; border-collapse: separate; border-spacing: 0; }
+.table th { padding: 1rem; background: #F9FAFB; text-align: left; color: var(--text-muted); font-size: 0.85rem; font-weight: 600; }
+.table td { padding: 1.5rem 1rem; border-bottom: 1px solid var(--border-color); vertical-align: top; }
+
+.prodCell { display: flex; flex-direction: column; gap: 0.25rem; }
+.prodName { font-weight: 800; font-size: 1.05rem; color: #1E293B; }
+.custName { font-size: 0.85rem; color: #64748B; font-weight: 600; }
+
+.reviewCell { display: flex; flex-direction: column; gap: 0.5rem; }
+.stars { display: flex; gap: 0.15rem; font-size: 1.1rem; }
+.starOn { color: #F59E0B; }
+.starOff { color: #E2E8F0; }
+.reviewText { font-family: Georgia, serif; font-style: italic; color: #475569; line-height: 1.5; margin: 0; }
+
+.date { font-size: 0.85rem; color: #94A3B8; font-weight: 600; white-space: nowrap; }
+
+.actions { display: flex; gap: 0.75rem; justify-content: center; }
+
+.approveBtn, .deleteBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.6rem 1rem;
+    border-radius: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.approveBtn { background: #DCFCE7; color: #166534; }
+.approveBtn:hover { background: #BBF7D0; }
+
+.deleteBtn { background: #FEE2E2; color: #991B1B; }
+.deleteBtn:hover { background: #FECACA; }
+
+.emptyState {
+    padding: 4rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.emptyIcon { font-size: 3rem; margin-bottom: 1rem; }
+.emptyState h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; color: #1E293B; }
+.emptyState p { color: #64748B; }

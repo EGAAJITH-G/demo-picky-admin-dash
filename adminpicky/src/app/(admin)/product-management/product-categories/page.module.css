@@ -4,8 +4,15 @@
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .header {
@@ -28,7 +35,8 @@
     align-items: start;
 }
 
-.addCard, .listCard {
+.addCard,
+.listCard {
     background: white;
     padding: 2rem;
     border-radius: 1.5rem;
@@ -140,7 +148,8 @@
     justify-content: flex-end;
 }
 
-.editBtn, .deleteBtn {
+.editBtn,
+.deleteBtn {
     padding: 0.5rem;
     background: #F3F4F6;
     color: #4B5563;

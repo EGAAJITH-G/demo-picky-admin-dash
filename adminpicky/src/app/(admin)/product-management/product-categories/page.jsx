@@ -51,19 +51,19 @@ const ProductCategories = () => {
                     <form onSubmit={handleAdd} className={styles.form}>
                         <div className={styles.inputGroup}>
                             <label>Category Name</label>
-                            <input 
-                                type="text" 
-                                placeholder="e.g. Footwear" 
-                                value={newCatName} 
+                            <input
+                                type="text"
+                                placeholder="e.g. Footwear"
+                                value={newCatName}
                                 onChange={(e) => setNewCatName(e.target.value)}
-                                required 
+                                required
                             />
                         </div>
                         <button type="submit" className={styles.submitBtn}>
                             {editingId ? 'Update' : 'Add Category'}
                         </button>
                         {editingId && (
-                            <button type="button" onClick={() => {setEditingId(null); setNewCatName('');}} className={styles.cancelBtn}>
+                            <button type="button" onClick={() => { setEditingId(null); setNewCatName(''); }} className={styles.cancelBtn}>
                                 Cancel
                             </button>
                         )}

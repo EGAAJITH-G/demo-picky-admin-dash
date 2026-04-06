@@ -1,0 +1,334 @@
+.container {
+    padding: 2rem;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.contentWrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+@media (max-width: 1024px) {
+    .contentWrapper {
+        flex-direction: column;
+    }
+}
+
+.formSection, .previewSection {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(159, 18, 57, 0.05);
+}
+
+.formSection {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.previewSection {
+    flex: 4;
+    position: sticky;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-height: 500px;
+}
+
+.previewSectionTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgba(159, 18, 57, 0.1);
+    padding-bottom: 0.8rem;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formGroup.fullWidth {
+    grid-column: 1 / -1;
+}
+
+.label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.input, .textarea, .select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input:focus, .textarea:focus, .select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(159, 18, 57, 0.1);
+}
+
+.uploadBox {
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: rgba(248, 250, 252, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.uploadBox:hover {
+    border-color: var(--primary-color);
+    background: rgba(159, 18, 57, 0.02);
+}
+
+.uploadIcon {
+    width: 40px;
+    height: 40px;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.toggleSwitch {
+    position: relative;
+    width: 50px;
+    height: 26px;
+    border-radius: 13px;
+    background: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.toggleSwitch.active {
+    background: var(--primary-color);
+}
+
+.toggleCircle {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    transition: all 0.3s;
+}
+
+.toggleSwitch.active .toggleCircle {
+    transform: translateX(24px);
+}
+
+/* SEO Field */
+.seoBox {
+    grid-column: 1 / -1;
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.seoTitle {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Blog Preview */
+.livePreview {
+    width: 100%;
+    border-radius: 16px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.previewImage {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #f1f5f9;
+}
+
+.previewContentBlock {
+    padding: 1.8rem;
+}
+
+.previewBadge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: rgba(159, 18, 57, 0.1);
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.previewTitle {
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+}
+
+.previewSubtitle {
+    font-size: 1.05rem;
+    color: #64748b;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.previewMeta {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.metaDivider {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #cbd5e1;
+}
+
+.previewText {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    margin-bottom: 1.5rem;
+}
+
+.previewTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.previewTag {
+    padding: 0.35rem 0.8rem;
+    background: #f1f5f9;
+    color: #64748b;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Actions */
+.actionsRow {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.btnPrimary, .btnSecondary, .btnOutline {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.btnPrimary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btnPrimary:hover {
+    background: #880f30;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(159, 18, 57, 0.3);
+}
+
+.btnSecondary {
+    background: #f1f5f9;
+    color: var(--text-main);
+}
+.btnSecondary:hover {
+    background: #e2e8f0;
+}
+
+.btnOutline {
+    background: transparent;
+    border: 1px solid #cbd5e1;
+    color: var(--text-main);
+}
+.btnOutline:hover {
+    background: #f8fafc;
+}

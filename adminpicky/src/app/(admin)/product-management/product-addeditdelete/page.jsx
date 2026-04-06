@@ -143,11 +143,11 @@ const ProductManagement = () => {
                             <div className={styles.formGrid}>
                                 <div className={styles.formGroup}>
                                     <label>Product Name</label>
-                                    <input type="text" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} required />
+                                    <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required />
                                 </div>
                                 <div className={styles.formGroup}>
                                     <label>Category</label>
-                                    <select value={formData.category} onChange={(e) => setFormData({...formData, category: e.target.value})}>
+                                    <select value={formData.category} onChange={(e) => setFormData({ ...formData, category: e.target.value })}>
                                         <option>Clothing</option>
                                         <option>Electronics</option>
                                         <option>Beauty</option>
@@ -156,15 +156,15 @@ const ProductManagement = () => {
                                 </div>
                                 <div className={styles.formGroup}>
                                     <label>Price ($)</label>
-                                    <input type="number" value={formData.price} onChange={(e) => setFormData({...formData, price: e.target.value})} required />
+                                    <input type="number" value={formData.price} onChange={(e) => setFormData({ ...formData, price: e.target.value })} required />
                                 </div>
                                 <div className={styles.formGroup}>
                                     <label>Stock</label>
-                                    <input type="number" value={formData.stock} onChange={(e) => setFormData({...formData, stock: e.target.value})} required />
+                                    <input type="number" value={formData.stock} onChange={(e) => setFormData({ ...formData, stock: e.target.value })} required />
                                 </div>
                                 <div className={`${styles.formGroup} ${styles.fullWidth}`}>
                                     <label>Description</label>
-                                    <textarea value={formData.description} onChange={(e) => setFormData({...formData, description: e.target.value})} />
+                                    <textarea value={formData.description} onChange={(e) => setFormData({ ...formData, description: e.target.value })} />
                                 </div>
                                 <div className={`${styles.formGroup} ${styles.fullWidth}`}>
                                     <label>Product Image</label>

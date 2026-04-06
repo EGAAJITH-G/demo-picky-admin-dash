@@ -1,0 +1,401 @@
+.dashContainer {
+    padding: 2rem;
+    background: #f8fafc;
+    min-height: 100vh;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dashHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.dashTitle {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+}
+
+.dashSubtitle {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.headerActions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.timeframeSelect {
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    border: 1.5px solid #e2e8f0;
+    background: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.primaryAddBtn {
+    background: #e11d48;
+    color: white;
+    padding: 0.7rem 1.4rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(225, 29, 72, 0.2);
+    transition: all 0.2s;
+}
+
+.primaryAddBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(225, 29, 72, 0.3);
+}
+
+/* STAT GRID */
+.statGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.statCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid #f1f5f9;
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
+}
+
+.statCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.statIconBox {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.statInfo label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.statInfo h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+}
+
+.statMeta {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    align-items: center;
+    color: #94a3b8;
+}
+
+.trendUp { color: #10b981; font-weight: 800; }
+.trendNeutral { color: #64748b; font-weight: 800; }
+
+/* MAIN DASHBOARD GRID */
+.mainDashboardGrid {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.chartWidget, .recentVendorsWidget, .taskWidget, .categoryWidget {
+    background: white;
+    padding: 1.75rem;
+    border-radius: 24px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.widgetHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.widgetHeader h3, .taskWidget h3, .categoryWidget h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.viewLink {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+/* GROWTH GRAPH (Actual functioning CSS) */
+.growthGraph {
+    height: 250px;
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+    padding-top: 1rem;
+}
+
+.yAxis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+    color: #94a3b8;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+}
+
+.barsContainer {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.barGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.barSpace {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.actualBar {
+    width: 100%;
+    max-width: 40px;
+    background: #f1f5f9;
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(to top, #e11d48, #fb7185);
+}
+
+.barHovered {
+    transform: scaleX(1.1);
+    filter: brightness(1.1);
+}
+
+.tooltip {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0f172a;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    white-space: nowrap;
+    z-index: 10;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #0f172a;
+}
+
+.barLabel {
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #94a3b8;
+}
+
+/* RECENT VENDORS LIST */
+.partnersList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.partnerRow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    background: #f8fafc;
+    border-radius: 14px;
+    transition: all 0.2s;
+}
+
+.partnerRow:hover {
+    background: #f1f5f9;
+    transform: translateX(5px);
+}
+
+.pAvatar {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #e11d48;
+}
+
+.pInfo { flex: 1; }
+.pInfo b { display: block; font-size: 0.9rem; color: #0f172a; }
+.pInfo span { font-size: 0.75rem; color: #64748b; font-weight: 600; }
+
+.pSales { font-weight: 800; color: #0f172a; font-size: 0.9rem; margin-right: 1rem; }
+
+.pStatus {
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.statusActive { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+.statusPending { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+
+/* LOWER GRID */
+.lowerGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.taskCard {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    background: #f8fafc;
+    border-radius: 18px;
+    border: 1.5px solid #f1f5f9;
+}
+
+.checkCircle {
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border: 2px solid #e2e8f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cbd5e1;
+}
+
+.taskCard:hover .checkCircle {
+    border-color: #e11d48;
+    color: #e11d48;
+}
+
+.taskBody { flex: 1; }
+.taskBody b { display: block; font-size: 0.95rem; color: #0f172a; }
+.taskBody p { font-size: 0.8rem; color: #64748b; margin-top: 0.1rem; }
+
+.actionBtn {
+    padding: 0.5rem 1rem;
+    background: #0f172a;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* CATEGORY PERFORMANCE BARS */
+.catBars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.catBarItem {
+    width: 100%;
+}
+
+.catMeta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #475569;
+}
+
+.barBg {
+    height: 10px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s ease-out;
+}
+
+@media (max-width: 1024px) {
+    .mainDashboardGrid, .lowerGrid {
+        grid-template-columns: 1fr;
+    }
+}

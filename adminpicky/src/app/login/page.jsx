@@ -1,21 +1,28 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
 
 const Login = () => {
+    useEffect(() => {
+        const isAuth = localStorage.getItem('picky_auth');
+        if (isAuth) {
+            window.location.href = '/';
+        }
+    }, []);
+
     const [credentials, setCredentials] = useState({ email: '', password: '' });
     const [loading, setLoading] = useState(false);
 
     const handleLogin = (e) => {
         e.preventDefault();
         setLoading(true);
-        
+
         // Simulating login request delay
         setTimeout(() => {
             setLoading(false);
             localStorage.setItem('picky_auth', 'true');
-            window.location.href = '/'; 
+            window.location.href = '/';
         }, 1200);
     };
 
@@ -48,11 +55,11 @@ const Login = () => {
                     <form onSubmit={handleLogin} className={styles.form}>
                         <div className={styles.inputGroup}>
                             <label>Admin Email</label>
-                            <input 
-                                type="email" 
+                            <input
+                                type="email"
                                 placeholder="name@pickysaas.com"
                                 value={credentials.email}
-                                onChange={(e) => setCredentials({...credentials, email: e.target.value})}
+                                onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
                                 required
                             />
                         </div>
@@ -62,17 +69,17 @@ const Login = () => {
                                 <label>Password</label>
                                 <a href="#" className={styles.forgotLink}>Forgot?</a>
                             </div>
-                            <input 
-                                type="password" 
+                            <input
+                                type="password"
                                 placeholder="••••••••"
                                 value={credentials.password}
-                                onChange={(e) => setCredentials({...credentials, password: e.target.value})}
+                                onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
                                 required
                             />
                         </div>
 
-                        <button 
-                            type="submit" 
+                        <button
+                            type="submit"
                             className={styles.loginBtn}
                             disabled={loading || !credentials.email || !credentials.password}
                         >
@@ -83,8 +90,8 @@ const Login = () => {
                             <span>OR</span>
                         </div>
 
-                        <button 
-                            type="button" 
+                        <button
+                            type="button"
                             className={styles.securityKeyBtn}
                             onClick={handleSecurityKey}
                         >

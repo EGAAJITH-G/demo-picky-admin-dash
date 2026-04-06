@@ -24,10 +24,10 @@ export default function Home() {
   return (
     <div style={{ display: 'flex', minHeight: '100vh' }}>
       <SideNav isMinimized={isMinimized} setIsMinimized={setIsMinimized} />
-      <main style={{ 
-        flex: 1, 
-        marginLeft: isMinimized ? '80px' : 'var(--sidebar-width)', 
-        display: 'flex', 
+      <main style={{
+        flex: 1,
+        marginLeft: isMinimized ? '80px' : 'var(--sidebar-width)',
+        display: 'flex',
         flexDirection: 'column',
         backgroundColor: 'var(--bg-color)',
         transition: 'margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1)'

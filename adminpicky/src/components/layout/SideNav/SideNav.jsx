@@ -29,7 +29,7 @@ const SideNav = ({ isMinimized, setIsMinimized }) => {
 
   // Helper to check if a route is active
   const isActive = (path) => pathname === path;
-  
+
   // Custom Click Handler for Category Navigation + Dropdown toggle
   const handleCategoryClick = (basePath, openSetter, currentState) => {
     // Navigate to base path (Overview Page)
